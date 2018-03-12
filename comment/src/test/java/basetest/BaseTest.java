@@ -8,7 +8,7 @@ public class BaseTest {
 	private ItemsService itemsService;
 	@Test
 	public void Test(){
-		Items items=itemsService.findItemsById(1);
-		System.out.println(items.toString());
+//		Items items=itemsService.findItemsById(1);
+//		System.out.println(items.toString());
 	}
 }

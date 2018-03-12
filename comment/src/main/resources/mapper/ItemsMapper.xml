@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.imooc.dao.ItemsMapper">
+	<sql id="dto">
+		t.id,t.name,t.price,t.detail,t.pic,t.createtime
+	</sql>
+	<select id="findItemsById" parameterType="java.lang.Integer" resultType="org.imooc.bean.Items">
+		select <include refid="dto"/> from items t where id=#{id} 
+	</select>
+</mapper>
